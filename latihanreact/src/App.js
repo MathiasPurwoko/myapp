@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Parent from './Component/Class/Parent';
+import BoostrapComp from './Component/Class/BootsrapComp';
 //import Home from './Comonent/Fungsional/Home';
 //import Beranda from './Comonent/Class/Beranda';
 //import './App.css';
@@ -12,7 +12,8 @@ function App() {
      
       
    
-      <Parent/>
+      
+      <BoostrapComp/>
       </div>
   );
 }
