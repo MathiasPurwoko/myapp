@@ -9,6 +9,7 @@ import { Form } from 'reactstrap';
 import DetailComp from './Component/Fungsional/DetailComp';
 //import DetailComp from './Comonent/Fungsional/DetailComp';
 import LisComp from './Component/Class/ListComp';
+import TambahComp from './Component/Class/Tambah';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Route exact path="/about" component={About} />
       <Route exact path="/detail/:id" component={DetailComp} />
       <Route exact path="/mahasiswa" component={LisComp} />
+      <Route exact path="/mahasiswa/tambah" component={TambahComp} />
        {/* <Route exact path="/detail/:id" component={DetailComp} /> */}
     </Switch>
 

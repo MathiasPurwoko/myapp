@@ -28,6 +28,7 @@ class LisComp extends PureComponent {
         return (
             <Container>
                 <h2>Data Mahasiswa</h2>
+                <NavLink href="/mahasiswa/tambah"><Button color="success">Tambah Data</Button></NavLink>
                 <hr />
                 <Table className="table-border">
                     <thead>
@@ -37,6 +38,7 @@ class LisComp extends PureComponent {
                             <th>Jurusan</th>
                             <th>Aksi</th>
                         </tr>
+                        <Table className="table-bordered"></Table>
                     </thead>
                     <tbody>
                         {this.state.mahasiswa.map(mahasiswa =>
