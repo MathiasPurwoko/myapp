@@ -20,6 +20,7 @@ import { CartContext } from './CartContext';
 import ProductComp from './Component/Hooks/Functional/ProductComp';
 import HooksReducer from './Component/Hooks/Functional/HooksReducer';
 import Tagihan from './Component/Hooks/Functional/Tagihan';
+import RegisterComp from './Component/RegisterComp';
 // import BootstrapComp from './Component/Class/BootstrapComp';
 //import Parent from './Component/Class/Parent';
 // import logo from './logo.svg';
@@ -28,8 +29,8 @@ import Tagihan from './Component/Hooks/Functional/Tagihan';
 
 const initialState = {
   jumlah: 1,
-  hargasatuan: 10000,
-  hargatotal: 10000
+  hargasatuan: 100000,
+  hargatotal: 100000
 }
 
 export const keranjangContext = createContext()
@@ -66,15 +67,17 @@ const App = () => {
         <switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/mahasiswa" component={ListComp} />
-          <Route exact path="/mahasiswa/tambah" component={TambahComp} />
-          <Route exact path="/mahasiswa/edit" component={EditComp} />
+          <Route exact path="/produk" component={ListComp} />
+          <Route exact path="/produk/tambahproduk" component={TambahComp} />
+          <Route exact path="/produk/edit" component={EditComp} />
           <Route exact path="/kelas" component={KelasComp} />
           <Route exact path="/hooks" component={HooksComp} />
           <Route exact path="/useeffects" component={HooksUseEffects} />
           <Route exact path="/produk" component={ProductComp} />
           <Route exact path="/reducer" component={HooksReducer} />
           <Route exact path="/tagihan" component={Tagihan} />
+          <Route exact path="/Register" component={RegisterComp} />
+
 
            {/*<Route exact path="/detail/:id" component={DetailComp} />*/}
         </switch>

@@ -11,10 +11,11 @@ class EditComp extends PureComponent {
         super(props)
 
         this.state = {
-            id_mahasiswa: this.props.location.state.id_mahasiswa,
-            nim: this.props.location.state.nim,
-            nama: this.props.location.state.nama,
-            jurusan: this.props.location.state.jurusan,
+            id_produk: this.props.location.state.id_produk,
+            kode_buku: this.props.location.state.kode_buku,
+            nama_buku: this.props.location.state.nama_buku,
+            jenis_buku: this.props.location.state.jenis_buku,
+            harga: this.props.location.state.harga,
             response: '',
             display: 'none'
         }
@@ -24,15 +25,16 @@ class EditComp extends PureComponent {
         this.setState({ [e.target.name]: e.target.value })
     }
 
-ubahmahasiswa = (idmahasiswa) => {
+ubahproduk = (id_produk) => {
     const data = qs.stringify({
-        id_mahasiswa: idmahasiswa,
-        nim: this.state.nim,
-        nama: this.state.nama,
-        jurusan: this.state.jurusan
+        id_produk: id_produk,
+        kode_buku: this.state.kode_buku,
+        nama_buku: this.state.nama_buku,
+        jenis_buku: this.state.jenis_buku,
+        harga: this.state.harga
     });
 
-    axios.put(api+ '/ubah', data)
+    axios.put(api+ '/ubahproduk', data)
     .then(json => {
         if(json === 200){
             this.setState({
@@ -51,34 +53,42 @@ ubahmahasiswa = (idmahasiswa) => {
     render() {
         return (
             <Container>
-                <h4>Form Tambah Data</h4>
+                <h4>Form Tambah Produk</h4>
                 <Alert color="success" style={{ display: this.state.display }}>
                     {this.state.response}
 
                 </Alert>
                 <Form className="form">
                     <Col>
-                        <Label>NIM</Label>
+                        <Label>kode Buku</Label>
                         <FormGroup>
                             <Row>
                                 <Col>
-                                    <Input type="text" name="nim" value={this.state.nim} onChange={this.handleChange} placeholder="Masukan NIM" />
+                                    <Input type="text" name="kode_buku" value={this.state.kode_buku} onChange={this.handleChange} placeholder="Masukan Kode" />
                                 </Col>
                             </Row>
                         </FormGroup>
-                        <Label>Nama</Label>
+                        <Label>Nama Buku</Label>
                         <FormGroup>
                             <Row>
                                 <Col>
-                                    <Input type="text" name="nama" value={this.state.nama} onChange={this.handleChange} placeholder="Masukan Nama" />
+                                    <Input type="text" name="nama_buku" value={this.state.nama_buku} onChange={this.handleChange} placeholder="Masukan Nama Buku" />
                                 </Col>
                             </Row>
                         </FormGroup>
-                        <Label>Jurusan</Label>
+                        <Label>Jenis Buku</Label>
                         <FormGroup>
                             <Row>
                                 <Col>
-                                    <Input type="text" name="jurusan" value={this.state.jurusan} onChange={this.handleChange} placeholder="Masukan Jurusan" />
+                                    <Input type="text" name="jenis_buku" value={this.state.jenis_buku} onChange={this.handleChange} placeholder="Masukan Jenis Buku" />
+                                </Col>
+                            </Row>
+                        </FormGroup>
+                        <Label>Harga</Label>
+                        <FormGroup>
+                            <Row>
+                                <Col>
+                                    <Input type="text" name="harga" value={this.state.harga} onChange={this.handleChange} placeholder="Masukan Harga" />
                                 </Col>
                             </Row>
                         </FormGroup>
@@ -86,7 +96,7 @@ ubahmahasiswa = (idmahasiswa) => {
                         <FormGroup>
                             <Row>
                                 <Col>
-                                    <Button type="button" onClick={()=>this.ubahmahasiswa(this.state.id_mahasiswa)}>Update</Button>
+                                    <Button type="button" onClick={()=>this.ubahproduk(this.state.id_produk)}>Update</Button>
                                 </Col>
                             </Row>
                         </FormGroup>

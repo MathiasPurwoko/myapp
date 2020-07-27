@@ -1,4 +1,7 @@
 import React, { useState, useContext } from 'react';
+import { Card, CardTitle, CardText } from 'reactstrap';
+
+
 import {
     Collapse,
     Navbar,
@@ -23,9 +26,24 @@ const NavbarComp = (props) => {
     const {value, setValue} = useContext(CartContext)
 
     return (
+      
         <div>
+
+       
+      <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+        <CardTitle>Selamat Berbelanja</CardTitle>
+        <CardText>Anda Puas Kami Senang. Terimakasih.</CardText>
+        
+      </Card>
+            <marquee direction="right" scrollamount="10">
+            <img src="https://i.ya-webdesign.com/images/sprite-gif-png-2.gif" />
+            <img src="https://i.ya-webdesign.com/images/sprite-gif-png-2.gif" />
+            <img src="https://i.ya-webdesign.com/images/sprite-gif-png-2.gif" />
+            <img src="https://i.ya-webdesign.com/images/sprite-gif-png-2.gif" /> </marquee>
+            
+            <p class="bg-primary text-green"><marquee>CEGAH COVID-19. Patuhi Protokol Kesehatan</marquee></p>
             <Navbar color="light" light expand="md">
-                <NavbarBrand to="/">reactstrap</NavbarBrand>
+                <NavbarBrand to="/">Mr. Books Store</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
@@ -33,25 +51,22 @@ const NavbarComp = (props) => {
                             <NavLink to="/" className="nav-link">Home</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="/about" className="nav-link">About</NavLink>
+                            <NavLink to="/about" className="nav-link">Tentang Kami</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="/mahasiswa" className="nav-link">Mahasiswa</NavLink>
+                        <NavLink to="/useeffects" className="nav-link">Daftar Buku</NavLink>
                         </NavItem>
                         <NavItem>
-                        <NavLink to="/kelas" className="nav-link">Class</NavLink>
+                            <NavLink to="/produk" className="nav-link">Produk Buku</NavLink>
                         </NavItem>
                         <NavItem>
-                        <NavLink to="/hooks" className="nav-link">Hook</NavLink>
+                            <NavLink to="/reducer" className="nav-link">Pesan</NavLink>
                         </NavItem>
                         <NavItem>
-                        <NavLink to="/useeffects" className="nav-link">Use Effects</NavLink>
+                            <NavLink to="/register" className="nav-link">Register</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="/produk" className="nav-link">Produk</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink to="/reducer" className="nav-link">Reducer</NavLink>
+                            <NavLink to="/login" className="nav-link">login</NavLink>
                         </NavItem>
                     </Nav>
                     <NavbarText>

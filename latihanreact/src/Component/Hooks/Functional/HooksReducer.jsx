@@ -13,11 +13,11 @@ function HooksReducer() {
             <Row>
                 <Col xs="6">
                     <Card>
-                        <CardImg top width="100%" src="https://placeimg.com/640/480/tech" alt="Card image cap" />
+                        <CardImg top width="100%" src="https://inc.mizanstore.com/aassets/img/com_cart/produk/harry-potter-dan-si-anak-terkutuk-harry-potter-and-the-cursed-child.jpg" alt="Card image cap" />
                     </Card>
                 </Col>
                 <Col xs="6">
-                <h3>ACER PRO</h3>
+                <h3>Novel Harry Potter</h3>
                     <p>Harga</p>
                     <h3>Rp. {countContext.keranjangState.hargatotal}</h3>
                     <p>Jumlah</p>

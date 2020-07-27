@@ -7,7 +7,7 @@ function ProductComp(){
         <div>
             <Container>
                 <hr/>
-                <h2>Produk</h2>
+                <h2>Produk Terbaru</h2>
                 <Row>
                     <RowProduct/>
                     <RowProduct/>
